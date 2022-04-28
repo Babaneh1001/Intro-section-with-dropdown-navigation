@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+  --lt-white: hsl(0, 0%, 98%);
+  --md-gray: hsl(0, 0%, 41%);
+  --md-black: hsl(0, 0%, 8%);
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--lt-white);
+  width: 100%;
+  font-family: 'Epilogue', sans-serif;
+}
+
+ul,li,a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--md-gray);
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding-inline: 3rem;
+  margin-top: 1rem;
+  max-width: 1244px;
+  margin-inline: auto;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  position: relative; /* this positions the nested ul
+  to the nav-menu so it doesn't slide to the extreme end when you open on bigger screens */
+}
+
+.left ul {
+  
+}
+
+/* Should I place the relative within the .left ul and adjust the positioning */
+
+.logo {
+  padding-top: 0.6rem;
+  margin-right: 2rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.left li{
+  margin-inline: 1rem;
+  display: inline-block;
+  padding-block: 0.3rem;
+}
+
+
+/* ######## the list dropdowns ########  */
+/* ####################
+  features section
+####################*/
+
+.sub-nav-menu {
+  display: none;
+}
+
+.sub-nav-menu ul {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-start;
+  top: 35px;
+  font-size: 0.8rem;
+  left: 90px;
+  background-color: var(--lt-white);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding-block: 1rem;
+  padding-inline: 0.6rem;
+  margin-top: 0.5rem;
+  border-radius: 0.65rem;
+}
+
+ul li.ft-hover:hover .sub-nav-menu
+{
+  display: block;
+}
+
+
+/* 
+.sub-nav-menu ul li a:hover {
+  color: var(--md-black);
+  padding-left: 0.2rem;
+} */
+
+/* controls the nested li's */
+.nav-menu ul li a:hover {
+  color: var(--md-black);
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+/* controls from company to about */
+.nav-menu .left ul li:hover {
+  color: var(--md-black);
+  transition: all 0.3s;
+  font-weight: 600;
+  margin-block: 0.2rem;
+}
+
+
+/* ####################
+  company section
+####################*/
+.sub-nav-menu-2 {
+  display: none;
+}
+
+.sub-nav-menu-2 ul{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-start;
+  top: 35px;
+  font-size: 0.8rem;
+  left: 240px;
+  background-color: var(--lt-white);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding-block: 1rem;
+  padding-inline: 0.35rem;
+  margin-top: 0.5rem;
+  border-radius: 0.65rem;
+}
+
+ul li.cm-hover:hover .sub-nav-menu-2
+{
+  display: block;
+}
+
+
+/* ######## end of list dropdowns ########  */
+
+
+/* controls the flex direction of right side of the nav li's */
+.right ul {
+  display: flex;
+  align-items: center;
+}
+
+/* controls the right side of the nav li's */
+.nav-menu .right ul li:hover {
+  color: var(--md-black);
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+/* controls the login li on the right side of the nav */
+.right ul li {
+  margin-inline: 1rem;
+}
+
+/* controls the nav learn more button  */
+.cta-btn {
+  border: 2px solid var(--md-gray);
+  border-radius: 1.15rem;
+  padding-block: 0.75rem;
+  padding-inline: 0.95rem;
+  background-color: transparent;
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+  background-color: var(--md-black);
+  color: var(--lt-white);
+  border: none;
+  font-weight: 800;
+}
+
+/* -------------------------------------------------- */
+
+
+/* ----------------- start of section ----------------- */
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 5.5rem;
+  margin-block-start: 9rem;
+  margin-block-end: 3rem;
+}
+
+
+/* ----------------- start of left section ----------------- */
+.left-section {
+  width:  50%;
+  margin-top: 2rem;
+}
+
+.main-text {
+  font-size: 4.5rem;
+  width: 100%;
+  max-width: 500px;
+  line-height: 3.7rem;
+  color: var(--md-black);
+}
+
+.sub-text {
+  font-size: 0.85rem;
+  line-height: 1.35rem;
+  margin-top: 2.5rem; 
+  color: var(--md-gray);
+  max-width: 350px;
+}
+
+.cta {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  border: none;
+  border-radius: 1.05rem;
+  padding-block: 1.25rem;
+  padding-inline: 1.55rem;
+  background-color: var(--md-black);
+  color: var(--lt-white);
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  font-size: 0.95rem;
+}
+
+.cta:hover {
+  cursor: pointer;
+  background-color: var(--lt-white);
+  border: 2px solid var(--md-black);
+  color: var(--md-black);
+}
+
+.sponsors img {
+  width: 100%;
+  max-width: 110px;
+  padding-inline: 1rem;
+}
+/* -----------------end of left section ----------------- */
+
+
+/* ----------------- start of right section -----------------*/
+.right-section {
+  width:  50%;
+  /* background-image: url(./images/image-hero-desktop.png); */
+  background-size: contain;
+  max-width: 400px;
+  background-repeat: no-repeat;
+  margin-left: 2rem;
+  background-position: 20% 50%;
+  height: 30rem;
+}
+
+.right-section img{
+  width: fit-content;
+  max-width: 500px;
+  margin-left: 2.5rem;
+  height: 100%;
+}
+/* ----------------- end of right section ----------------- */
+
+
+
+/*----------------- end of section ----------------- */
+
+
+/* ####################
+  media queries
+####################*/
+
+@media (max-width: 780px) {
+
+  .container {
+    max-width: 780px;
+  }
+
+  .section {
+    max-width: 780px;
+    flex-direction: column-reverse;
+    /* background-color: beige; */
+    margin-block-start: 1rem;
+    margin-inline: 0.2rem;
+  }
+
+  .nav-menu ul{
+    display: none;
+  }
+
+  .left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: inline-block;
+    /* position: absolute; */
+    /* left: 42rem; */
+  }
+
+  .lg-img {
+    display: none;
+  }
+
+  .left-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .right-section {
+    display: flex;
+    background-image: url(./images/image-hero-mobile.png);
+    background-size: cover;
+    width: 100%;
+    max-width: 780px;
+    margin-left: 0;
+  }
+
+  .main-text {
+    font-size: 2.2rem;
+    text-align: center;
+    line-height: 3.7rem;
+    margin-top: 30px;
+  }
+
+  .sub-text {
+    font-size: 0.95rem;
+    line-height: 1.68rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+    padding-inline: 1.5rem;
+  }
+
+  .cta {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    border-radius: 1.05rem;
+    padding-block: 1.15rem;
+    padding-inline: 1.55rem;
+  }
+
+  .sponsors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 780px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .sponsors img:nth-child(-n+2) {
+    margin-bottom: 1rem;
+  }
+
+}

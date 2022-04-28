@@ -1,0 +1,108 @@
+
+.nav {
+  /* display: flex; */
+  /* position: relative;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;  
+  width: 100%;
+  font-size: 0.95rem; */
+  /* come back to delete or adjust */
+}
+
+
+/* start of left nav */
+.left {
+  /* display: flex; */
+  /* padding-inline: 3rem; */
+}
+
+.left-nav {
+  /* display: flex; */
+  /* justify-content: space-between;
+  align-items: center;
+  width: 100%; */
+}
+
+.features {
+  margin-right: 30px;
+}
+
+.nav-logo {
+  width: 4rem;
+  margin-right: 2.5rem;
+  cursor: pointer;
+}
+
+.nav-menu {
+  /* display: flex;
+  justify-content: space-between;
+  width: 100%; */
+}
+
+.nav-menu ul{
+  /* display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-items: center;  */
+  /* flex-direction: row; */
+}
+
+.nav-menu ul li {
+  padding-inline: 0.625rem;
+}
+
+.nav-menu ul li:hover {
+  color: var(--md-black);
+}
+
+.nav-menu ul li a:hover {
+  color: var(--md-black);
+}
+
+.nav-menu ul li ul {
+  /* display: flex;
+  flex-direction: column;
+  position: fixed;
+  margin-top: 3rem;
+  line-height: 2rem; */
+}
+
+.mx-r a{
+  margin-right: 30px;
+}
+
+
+
+
+/* end of left nav */
+
+/* start of right nav */
+.right-nav {
+  /* display: flex;
+  align-items: center; */
+  padding-inline: 0.625rem;
+}
+
+.right-nav button {
+  margin-inline-start: 2.625rem;
+  border: 1px solid var(--md-gray);
+  border-radius: 0.65rem;
+   
+  background-color: transparent;
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 500;
+}
+
+.right-nav a:hover {
+  color: var(--md-black);
+}
+
+.right-nav button:hover {
+  background-color: var(--md-black);
+  color: var(--lt-white);
+}
+/* end of right nav */
+
+
+
